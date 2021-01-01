@@ -7,6 +7,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import Navigator from './Navigator';
 import Drawer from '@material-ui/core/Drawer';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -15,13 +16,6 @@ const useStyles = makeStyles((theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-      display: 'none',
-      [theme.breakpoints.up('sm')]: {
-        display: 'block',
-      },
     },
     inputRoot: {
       color: 'inherit',
@@ -49,7 +43,6 @@ export default function Header() {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setDrawer({ ...isOpen, [anchor]: open });
   };
   return (
@@ -68,12 +61,12 @@ export default function Header() {
           <Drawer open={isOpen["left"]} onClose={toggleDrawer("left", false)}>
             <Navigator />
           </Drawer>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Typescript React Sample
-          </Typography>
+          <Link href="/">
+            Typescript React
+          </Link>
         </Toolbar>
       </AppBar>
-      <Toolbar variant="dense" />
+      <Toolbar />
     </div>
   );
 }

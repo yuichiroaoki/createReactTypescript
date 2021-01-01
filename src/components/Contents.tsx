@@ -1,13 +1,12 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
-    },
-    toolbar: {
-      backgroundColor: 'green'
     },
     title: {
       flexGrow: 1,
@@ -29,11 +28,10 @@ export default function Contents() {
     const classes = useStyles();
   
     return (
-      <div className={classes.root}>
-        <Paper elevation={0} />
-        <Paper />
-        <p>hello</p>
-        <Paper elevation={3} />
-      </div>
+        <Container>
+            <Typography variant="h1">
+                Hello
+            </Typography>
+        </Container>
     );
   }
