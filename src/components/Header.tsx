@@ -1,13 +1,12 @@
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
 import Navigator from './Navigator';
+import Drawer from '@material-ui/core/Drawer';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -42,7 +41,8 @@ const useStyles = makeStyles((theme) =>
     },
   }),
 );
-export default function ButtonAppBar() {
+
+export default function Header() {
   const classes = useStyles();
   const [isOpen, setDrawer] = React.useState({left: false});
 
@@ -56,19 +56,25 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="fixed">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <Toolbar variant="dense">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+            onClick={toggleDrawer("left", true)}
+          >
             <MenuIcon />
           </IconButton>
           <Drawer open={isOpen["left"]} onClose={toggleDrawer("left", false)}>
             <Navigator />
           </Drawer>
-          <Typography variant="h6" className={classes.title}>
-            News
+          <Typography className={classes.title} variant="h6" noWrap>
+            Network Visualizer
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+      <Toolbar variant="dense" />
     </div>
   );
 }
