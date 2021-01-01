@@ -31,11 +31,6 @@ const categories = [
             { id: 'Upload', icon: <PermMediaOutlinedIcon />, url: './upload' },
             { id: 'Hosting', icon: <PublicIcon /> },
             { id: 'Functions', icon: <SettingsEthernetIcon /> },
-            {
-                id: 'Source Code',
-                icon: <GitHubIcon />,
-                url: 'https://github.com/clinfo/Sample-levelGraphVisualizer'
-            },
         ],
     },
     {
