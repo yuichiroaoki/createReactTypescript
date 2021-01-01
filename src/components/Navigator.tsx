@@ -97,7 +97,7 @@ function Navigator(props) {
             <ListItem
                 className={clsx(classes.firebase, classes.item, classes.itemCategory)}
             >
-                Network Visualizer
+                Typescript React Sample
         </ListItem>
             <ListItem className={clsx(classes.item, classes.itemCategory)}
                 button

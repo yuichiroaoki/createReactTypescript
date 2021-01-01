@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) =>
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
       width: '100%',
@@ -56,7 +55,7 @@ export default function Header() {
   return (
     <div className={classes.root}>
       <AppBar position="fixed">
-        <Toolbar variant="dense">
+        <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -70,7 +69,7 @@ export default function Header() {
             <Navigator />
           </Drawer>
           <Typography className={classes.title} variant="h6" noWrap>
-            Network Visualizer
+            Typescript React Sample
           </Typography>
         </Toolbar>
       </AppBar>
