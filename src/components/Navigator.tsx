@@ -16,7 +16,6 @@ import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
 import TimerIcon from '@material-ui/icons/Timer';
 import SettingsIcon from '@material-ui/icons/Settings';
 import PhonelinkSetupIcon from '@material-ui/icons/PhonelinkSetup';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 const categories = [
     {
