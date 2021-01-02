@@ -32,7 +32,7 @@ export default function Contents() {
     <Container>
       <Typography variant="h1">
         Hello
-            </Typography>
+      </Typography>
       <Counter>
         {({ count, setCount }) => (
           <div>

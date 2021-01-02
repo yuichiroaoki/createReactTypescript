@@ -7,12 +7,15 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import Navigator from './Navigator';
 import Drawer from '@material-ui/core/Drawer';
-import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+    },
+    title: {
+      color: theme.palette.common.white,
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -61,9 +64,9 @@ export default function Header() {
           <Drawer open={isOpen["left"]} onClose={toggleDrawer("left", false)}>
             <Navigator />
           </Drawer>
-          <Link href="/">
+          <Button href="/" className={classes.title}>
             Typescript React
-          </Link>
+          </Button>
         </Toolbar>
       </AppBar>
       <Toolbar />
