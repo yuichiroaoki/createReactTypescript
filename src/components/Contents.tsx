@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { Counter } from "./Counter";
-import {TextField} from "./Example";
+// import {TextField} from "./Example";
 
 export default function Contents() {
   return (
@@ -18,7 +18,7 @@ export default function Contents() {
           </div>
         )}
       </Counter>
-      <TextField />
+      {/* <TextField /> */}
     </Container>
   );
 }
